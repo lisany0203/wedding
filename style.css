@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1em;
+    
+}
+
+.navbar{
+    background-color: rgb(255, 255, 255);
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.navbar-brand{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(179, 144, 98);
+    text-decoration: none;
+}
+.navbar-nav{
+    display: flex;
+    list-style: none;
+}
+.nav-item{
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(179, 144, 98);
+}
+.nav-item .nav-link{
+    text-decoration: none;
+    color: rgb(179, 144, 98);
+}
+
+
+.opening{
+    text-align: center;
+    margin: 0px 0;
+    background-image: url('wedding.png');
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+
+    
+}
+.opening .opening-content{
+    height: inherit;
+    color: rgb(13, 8, 3);
+    background-color: #a78d78;
+    opacity: 0.5;
+    box-shadow: 0 4px 8px #A78D78;
+    padding: 250px 0;
+
+}
+.opening .opening-content h1{
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+.story{
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+.story-container{
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.story-block{
+    background-color: #a89f88;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+}
+.story-block-middle{
+    padding:200px 0;
+}
+.story-block-middle h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.story-block .story-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+.event-details{
+    background-color: #bebda7;
+    padding: 50px 20px;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+.event-container{
+    display: flex;
+    justify-content: center;
+}
+.block-event{
+    background-color: #a89f88;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 20px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location-container h3 {
+    background-color: red;
+    display: inline-block;
+}
+
+.block-location {
+    background-color: #a89f88;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 200px;
+  background-color: #ffffff;
+  height: 90vh;
+  padding-top: 50px;
+  
+}
+.timeline h1 {
+  text-align: center;
+  color: #7e6650;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgb(175, 156, 113);
+  top: 9em;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -7px;
+  background-color: rgb(191, 153, 106);
+  border: white 3px solid;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(178, 155, 124);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -7px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #a89f88;
+  position: relative;
+  border-radius: 6px;
+}
+.gallery {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #a89f88;
+}
+.gallery h2{
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #7e6650;
+  margin-bottom: 30px;
+  background-color: #a89f88;
+}
+.wedding-image img {
+  margin-top: 10px;
+  width: 300px;
+  height: 300px;
+
+}
+.wedding-image-cover {
+  float: none;
+  width: 100%;
+  padding: 0 150px;
+}
+
+/* Clear floats after the columns */
+.gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.faq{
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.question{
+  margin-bottom: 30px;
+  text-align: left;
+  background-color: #a89f88;
+  padding: 20px;
+  width: 35em;
+  border-radius: 5px;
+}
+.contact{
+    background-color: #a89f88;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    
+}
+.contact h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f5eee8;
+}
+.contact p{
+    font-size: 1.2em;
+    color: #f5eee8;
+}
+.marry-kenneth{
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+
+}
+.marry-kenneth h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #7e6650;
+} 
+.marry-kenneth p{
+    font-size: 1.2em;
+    color: #7e6650;
+}
